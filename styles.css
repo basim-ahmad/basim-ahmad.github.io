@@ -814,6 +814,33 @@ section {
     color: #00f5ff;
 }
 
+/* CV/Resume Section */
+.cv {
+    color: #fff;
+}
+
+.cv-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.cv-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.cv-buttons .btn i {
+    font-size: 1rem;
+}
+
 /* Contact Section */
 .contact {
     color: #fff;
@@ -1143,6 +1170,16 @@ section {
     .contact-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    .cv-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .cv-buttons .btn {
+        width: 100%;
+        justify-content: center;
     }
     
     .footer .container {
