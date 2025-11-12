@@ -121,9 +121,8 @@ body {
     position: relative;
     color: #fff;
     padding: 0 2rem;
+    padding-top: 80px;
     overflow: hidden;
-    /* padding-top: 100px; */
-    
 }
 
 .hero-content {
@@ -1049,7 +1048,13 @@ section {
         grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
-        padding-top: 300px;
+        padding-top: 0;
+    }
+    
+    .hero {
+        padding-top: 100px;
+        min-height: 100vh;
+        height: auto;
     }
     
     .hero-visual {
@@ -1197,6 +1202,16 @@ section {
         font-size: 2rem;
     }
     
+    .hero {
+        padding-top: 120px;
+        min-height: 100vh;
+        height: auto;
+    }
+    
+    .hero-content {
+        padding-top: 0;
+    }
+    
     .hero-buttons {
         flex-direction: column;
         align-items: center;
@@ -1208,5 +1223,33 @@ section {
     
     .timeline-tags {
         justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero {
+        padding-top: 130px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .hero-content {
+        padding-top: 0;
+    }
+    
+    .name {
+        font-size: 1.8rem;
+    }
+    
+    .greeting {
+        font-size: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
     }
 }
