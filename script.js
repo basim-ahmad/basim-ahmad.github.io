@@ -635,6 +635,35 @@ class ProjectFilter {
     }
 }
 
+// Scroll to Top Button
+class ScrollToTop {
+    constructor() {
+        this.button = document.getElementById('scroll-to-top');
+        this.init();
+    }
+
+    init() {
+        if (!this.button) return;
+
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                this.button.classList.add('show');
+            } else {
+                this.button.classList.remove('show');
+            }
+        });
+
+        // Scroll to top on click
+        this.button.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize 3D background
@@ -665,6 +694,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize project filter
     new ProjectFilter();
+    
+    // Initialize scroll to top button
+    new ScrollToTop();
     
     // Add loading screen
     const loadingScreen = document.createElement('div');
@@ -783,3 +815,4 @@ function createMatrixRain() {
         canvas.remove();
     }, 10000);
 }
+

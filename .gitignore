@@ -55,3 +55,6 @@ DEPLOYMENT.md
 README.md
 .github/workflows/deploy.yml
 CNAME
+package-lock.json
+package.json
+Basim's CV.pdf
